@@ -17,3 +17,280 @@ api.logic WARNING 2023-04-14 18:26:01,348 getMoiveDetails is successfully called
 django.utils.autoreload INFO 2023-04-14 18:33:49,686 Watching for file changes with StatReloader
 api.logic INFO 2023-04-14 18:33:54,856 getPopularMovies is successfully called
 api.logic WARNING 2023-04-14 18:33:54,864 getMoiveDetails is successfully called
+django.utils.autoreload INFO 2023-04-14 20:06:19,754 Watching for file changes with StatReloader
+api.logic INFO 2023-04-14 20:06:34,606 getPopularMovies is successfully called
+api.logic WARNING 2023-04-14 20:06:34,615 getMoiveDetails is successfully called
+django.request ERROR 2023-04-14 20:06:59,284 Internal Server Error: /user/create/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 20, in post
+    user = userinfo.save(commit=False)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 189, in save
+    assert 'commit' not in kwargs, (
+AssertionError: 'commit' is not a valid keyword argument to the 'save()' method. If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. You can also pass additional keyword arguments to 'save()' if you need to set extra attributes on the saved model instance. For example: 'serializer.save(owner=request.user)'.'
+django.utils.autoreload INFO 2023-04-14 20:10:36,392 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:10:38,687 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 20:10:52,481 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:10:54,663 Watching for file changes with StatReloader
+api.logic WARNING 2023-04-14 20:11:04,594 makeProfile is successfully called
+django.request ERROR 2023-04-14 20:11:04,795 Internal Server Error: /user/create/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 34, in post
+    makeProfile(userinfo.validated_data)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\logic.py", line 16, in makeProfile
+    userprofile = Profile.objects.create(
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 669, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\fields\related_descriptors.py", line 340, in __set__
+    super().__set__(instance, value)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\fields\related_descriptors.py", line 237, in __set__
+    raise ValueError(
+ValueError: Cannot assign "OrderedDict([('password', 'obiwan'), ('username', 'obiwan')])": "Profile.user" must be a "User" instance.
+django.utils.autoreload INFO 2023-04-14 20:11:15,293 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:11:16,824 Watching for file changes with StatReloader
+api.logic WARNING 2023-04-14 20:11:37,654 makeProfile is successfully called
+django.request ERROR 2023-04-14 20:11:37,812 Internal Server Error: /user/create/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 34, in post
+    makeProfile(userinfo.validated_data)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\logic.py", line 16, in makeProfile
+    userprofile = Profile.objects.create(
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 669, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\fields\related_descriptors.py", line 340, in __set__
+    super().__set__(instance, value)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\fields\related_descriptors.py", line 237, in __set__
+    raise ValueError(
+ValueError: Cannot assign "OrderedDict([('password', 'obiwan'), ('username', 'obiwan123')])": "Profile.user" must be a "User" instance.
+django.utils.autoreload INFO 2023-04-14 20:12:25,320 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:12:26,496 Watching for file changes with StatReloader
+django.request ERROR 2023-04-14 20:12:36,235 Internal Server Error: /user/create/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 33, in post
+    userinfo.validated_data.save()
+AttributeError: 'collections.OrderedDict' object has no attribute 'save'
+django.utils.autoreload INFO 2023-04-14 20:12:54,365 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:12:56,149 Watching for file changes with StatReloader
+api.logic WARNING 2023-04-14 20:13:01,943 makeProfile is successfully called
+django.request ERROR 2023-04-14 20:13:02,021 Internal Server Error: /user/create/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 34, in post
+    makeProfile(userinfo.validated_data)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\logic.py", line 16, in makeProfile
+    userprofile = Profile.objects.create(
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 669, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\base.py", line 541, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\fields\related_descriptors.py", line 340, in __set__
+    super().__set__(instance, value)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\fields\related_descriptors.py", line 237, in __set__
+    raise ValueError(
+ValueError: Cannot assign "OrderedDict([('password', 'obiwan'), ('username', 'obiwan1234')])": "Profile.user" must be a "User" instance.
+django.utils.autoreload INFO 2023-04-14 20:13:41,582 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:13:43,206 Watching for file changes with StatReloader
+api.logic WARNING 2023-04-14 20:14:02,500 getUser is successfully called
+django.request ERROR 2023-04-14 20:14:02,651 Internal Server Error: /user/getuser/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 89, in get
+    movie_list = getUser(request.user)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\logic.py", line 141, in getUser
+    userprofile = Profile.objects.get(user=user)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+api.models.Profile.DoesNotExist: Profile matching query does not exist.
+django.request WARNING 2023-04-14 20:14:11,514 Unauthorized: /user/getuser/
+api.logic INFO 2023-04-14 20:14:38,215 getPopularMovies is successfully called
+api.logic WARNING 2023-04-14 20:14:38,220 getMoiveDetails is successfully called
+django.utils.autoreload INFO 2023-04-14 20:16:03,614 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:16:05,227 Watching for file changes with StatReloader
+django.request ERROR 2023-04-14 20:16:22,993 Internal Server Error: /user/create/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 30, in post
+    user = userinfo.save(commit=False)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 189, in save
+    assert 'commit' not in kwargs, (
+AssertionError: 'commit' is not a valid keyword argument to the 'save()' method. If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. You can also pass additional keyword arguments to 'save()' if you need to set extra attributes on the saved model instance. For example: 'serializer.save(owner=request.user)'.'
+django.request WARNING 2023-04-14 20:16:38,508 Unauthorized: /api/token/
+django.utils.autoreload INFO 2023-04-14 20:16:53,911 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:16:55,114 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 20:17:45,105 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:17:46,234 Watching for file changes with StatReloader
+api.logic WARNING 2023-04-14 20:17:54,861 makeProfile is successfully called
+api.logic WARNING 2023-04-14 20:18:44,806 makeProfile is successfully called
+django.request WARNING 2023-04-14 20:19:09,894 Not Found: /favicon.ico
+django.utils.autoreload INFO 2023-04-14 20:19:50,217 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:19:51,385 Watching for file changes with StatReloader
+django.request WARNING 2023-04-14 20:20:36,826 Unauthorized: /api/token/
+django.utils.autoreload INFO 2023-04-14 20:21:37,314 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:21:38,468 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 20:21:45,598 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:21:46,755 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 20:23:24,294 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 20:23:25,547 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 20:24:34,410 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 22:26:31,464 Watching for file changes with StatReloader
+django.request WARNING 2023-04-14 22:27:00,647 Method Not Allowed: /user/create/
+django.request WARNING 2023-04-14 22:27:01,250 Not Found: /favicon.ico
+django.request WARNING 2023-04-14 22:27:11,740 Method Not Allowed: /user/create/
+django.utils.autoreload INFO 2023-04-14 22:27:43,390 C:\Users\soham\Documents\Python\movie-system-backend\api\serializers.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 22:27:44,551 Watching for file changes with StatReloader
+django.request WARNING 2023-04-14 22:28:28,377 Bad Request: /user/create/
+django.request ERROR 2023-04-14 22:29:30,798 Internal Server Error: /user/create/
+Traceback (most recent call last):
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\soham\Documents\Python\movie-system-backend\api\views.py", line 30, in post
+    user = userinfo.save(commit=False)
+  File "C:\Users\soham\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 189, in save
+    assert 'commit' not in kwargs, (
+AssertionError: 'commit' is not a valid keyword argument to the 'save()' method. If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. You can also pass additional keyword arguments to 'save()' if you need to set extra attributes on the saved model instance. For example: 'serializer.save(owner=request.user)'.'
+django.utils.autoreload INFO 2023-04-14 22:30:06,122 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 22:30:07,251 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 22:30:25,645 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 22:30:26,826 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 22:30:50,555 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 22:30:51,708 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 22:31:10,461 C:\Users\soham\Documents\Python\movie-system-backend\api\views.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 22:31:11,696 Watching for file changes with StatReloader
+api.logic WARNING 2023-04-14 22:31:20,333 makeProfile is successfully called
+django.request WARNING 2023-04-14 22:31:32,663 Not Found: /favicon.ico
+django.utils.autoreload INFO 2023-04-14 22:32:19,999 C:\Users\soham\Documents\Python\movie-system-backend\api\serializers.py changed, reloading.
+django.utils.autoreload INFO 2023-04-14 22:32:21,207 Watching for file changes with StatReloader
