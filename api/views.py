@@ -5,17 +5,7 @@ from rest_framework.response import Response
 
 from .serializers import UserSerializer
 from django.contrib.auth import get_user_model
-from .logic import (
-    getFeature,
-    getMovieList,
-    updateRating,
-    getMovies,
-    getPopularMovies,
-    getUser,
-    getMovieDetails,
-    makeProfile,
-    getMovie,
-)
+from .logic import getFeature, getMoviereccomandation, updateRating, getMovies, getPopularMovies, getUser, getMovieDetails, makeProfile, getMovie
 from .models import Movies
 import pandas as pd
 
@@ -28,7 +18,7 @@ class CreateUser(APIView):
         if userinfo.is_valid():
             print(userinfo.validated_data)
             user = userinfo.save(commit=False)
-            # makeProfile(user)
+            makeProfile(user)
         else:
             return Response(userinfo.errors)
         return Response(userinfo.validated_data)
@@ -44,8 +34,10 @@ class GetUserInfo(APIView):
 
 
 class HomePage(APIView):
+
     def get(self, request):
-        name = request.GET.get("name")
+
+        name = request.GET.get('name')
         if name == None:
             movie_list = None
             if request.user.is_anonymous:
@@ -59,7 +51,7 @@ class HomePage(APIView):
             return Response(movie_list)
         else:
             print("sucsessfully worked")
-            moviePrefix = request.GET.get("name")
+            moviePrefix = request.GET.get('name')
             movies = getMovies(moviePrefix)
             return Response(movies)
 
@@ -68,8 +60,8 @@ class Training_view(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        movieId = request.GET.get("movieId")
-        rating = request.GET.get("rating")
+        movieId = request.GET.get('movieId')
+        rating = request.GET.get('rating')
         print(f"movieId is : {movieId}")
         print(f"rating is : {rating}")
         print("Succesfully gets data")
@@ -91,11 +83,12 @@ class GetUser(APIView):
 
 
 class GetMovie(APIView):
+
     def get(self, request):
         user = None
         if request.user.is_anonymous == False:
             user = request.user
-        movieID = request.GET.get("movieId")
+        movieID = request.GET.get('movieId')
         movie = getMovie(movieID, user)
         return Response(movie)
 

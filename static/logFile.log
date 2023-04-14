@@ -1,0 +1,19 @@
+C:\Users\snehp\Desktop\Project\Movie Recommandation\movie-system-backend-master\movie_backend\settings.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\snehp\Desktop\Project\Movie Recommandation\movie-system-backend-master\api\logic.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\snehp\Desktop\Project\Movie Recommandation\movie-system-backend-master\movie_backend\settings.py changed, reloading.
+django.utils.autoreload INFO 2023-04-12 22:14:56,645 autoreload 3944 3996 Watching for file changes with StatReloader
+api.logic INFO 2023-04-12 22:15:14,212 logic 3944 12188 getPopularMovies is successfully called
+api.logic WARNING 2023-04-12 22:15:14,212 logic 3944 12188 getMoiveDetails is successfully called
+django.utils.autoreload INFO 2023-04-12 22:16:36,219 autoreload 3944 3996 C:\Users\snehp\Desktop\Project\Movie Recommandation\movie-system-backend-master\movie_backend\settings.py changed, reloading.
+django.utils.autoreload INFO 2023-04-12 22:16:39,065 Watching for file changes with StatReloader
+django.utils.autoreload INFO 2023-04-14 18:23:14,896 Watching for file changes with StatReloader
+django.request WARNING 2023-04-14 18:24:47,886 Unauthorized: /user/getmovie/
+django.request WARNING 2023-04-14 18:24:57,771 Unauthorized: /user/info/
+django.request WARNING 2023-04-14 18:25:17,575 Unauthorized: /user/home/
+api.logic INFO 2023-04-14 18:26:01,329 getPopularMovies is successfully called
+api.logic WARNING 2023-04-14 18:26:01,348 getMoiveDetails is successfully called
+django.utils.autoreload INFO 2023-04-14 18:33:49,686 Watching for file changes with StatReloader
+api.logic INFO 2023-04-14 18:33:54,856 getPopularMovies is successfully called
+api.logic WARNING 2023-04-14 18:33:54,864 getMoiveDetails is successfully called

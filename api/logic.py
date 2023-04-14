@@ -4,14 +4,15 @@ from .models import Profile, Movies
 import pickle
 from django.db.models import Q
 from django.contrib.auth.models import User
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def makeProfile(user):
-    print("makeProfile successfully called")
+    logger.warning("makeProfile is successfully called")
     r = []
     lastrating = []
-    for i in range(10):
-        lastrating.append(-1)
     userprofile = Profile.objects.create(
         user=user, Lastrating=str(lastrating), R=str(r)
     )
@@ -19,7 +20,7 @@ def makeProfile(user):
 
 
 def getFeature(user):
-    print("getFeature is successfully called")
+    logger.warning("getFeature is successfully called")
     userprofile = None
     try:
         userprofile = Profile.objects.get(user=user)
@@ -27,20 +28,22 @@ def getFeature(user):
     except:
         makeProfile(user)
 
-    return getMovieList(userprofile)
+    return getMoviereccomandation(userprofile)
 
 
-def getMovieList(userprofile):
-    print("getMovieList succesfully called")
+def getMoviereccomandation(userprofile):
+    logger.warning("mgetMovierecommandation is successfully called")
     R = json.loads(userprofile.R)
     r = []
     for i in R:
         r.append(i[0])
-    lr = json.loads(userprofile.Lastrating)
+    LR = json.loads(userprofile.Lastrating)
     movie_ids = []
-    for i in range(9, -1, -1):
-        if lr[i] != -1:
-            movie_ids.append(lr[i])
+
+    lr = sorted(LR, reverse=True)
+
+    for i in lr:
+        movie_ids.append(i[2])
         if len(movie_ids) == 4:
             break
     similarity = pickle.load(open("./static/similarity.pkl", "rb"))
@@ -62,7 +65,7 @@ def getMovieList(userprofile):
 
 
 def getPopularMovies(movies, r=[]):
-    print("getPopularMovies successfully called")
+    logger.info("getPopularMovies is successfully called")
     index = 0
     popularity_list = pickle.load(open("./static/popularity_list.pkl", "rb"))
     imdbTokey = pickle.load(open("./static/imdbTokey.pkl", "rb"))
@@ -74,6 +77,7 @@ def getPopularMovies(movies, r=[]):
 
 
 def getMovieDetails(movies):
+    logger.warning("getMoiveDetails is successfully called")
     movie_list = []
     for i in movies:
         movie = Movies.objects.get(Imdb_id=i)
@@ -88,36 +92,35 @@ def getMovieDetails(movies):
 
 
 def updateRating(movieID, user, rating):
-    print("Succsessfully called updateRating")
+    logger.warning("updateRating is successfully called")
     userprofile = Profile.objects.get(user=user)
     R = json.loads(userprofile.R)
     r = []
     for i in R:
         r.append(i[0])
-    lr = json.loads(userprofile.Lastrating)
+    LR = json.loads(userprofile.Lastrating)
     imdbTokey = pickle.load(open("./static/imdbTokey.pkl", "rb"))
-    lr[rating - 1] = imdbTokey[movieID] - 1
+    lr = [rating, len(LR), imdbTokey[movieID] - 1]
+    LR.append(lr)
     if imdbTokey[movieID] - 1 not in r:
         R.append([imdbTokey[movieID] - 1, rating])
-
     userprofile.R = str(R)
-    userprofile.Lastrating = str(lr)
+    userprofile.Lastrating = str(LR)
     try:
         userprofile.full_clean()
         userprofile.save()
     except:
-        print("Validation error in updateRating method")
-    print("Succsessfully updated Rating")
+        logger.error("Validation Error occur in updateRating method")
 
 
 def getMovies(moviePrefix):
-    print("sucsessfully called getMovie")
+    logger.warning("getMovies is successfully called")
     movies = Movies.objects.filter(Q(Title__icontains=moviePrefix)).values()
     return movies
 
 
 def getMovie(movieID, user):
-    print("getMovie successfully called")
+    logger.warning("getMovie is successfully called")
     movie = Movies.objects.filter(Imdb_id__contains=movieID).values()
     dictionary = {}
     keyToImdb = pickle.load(open("./static/keyToImdb.pkl", "rb"))
@@ -134,7 +137,7 @@ def getMovie(movieID, user):
 
 
 def getUser(user):
-    print("getUser successfully called")
+    logger.warning("getUser is successfully called")
     userprofile = Profile.objects.get(user=user)
     R = json.loads(userprofile.R)
     keyToImdb = pickle.load(open("./static/keyToImdb.pkl", "rb"))
