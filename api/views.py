@@ -29,9 +29,8 @@ class CreateUser(APIView):
             print(userinfo.validated_data)
             user = userinfo.save()
             makeProfile(user)
-        else:
-            return Response(userinfo.errors)
-        return Response(userinfo.validated_data)
+            return Response(UserSerializer(user).data)
+        return Response(userinfo.errors)
 
 
 class GetUserInfo(APIView):
